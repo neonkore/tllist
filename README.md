@@ -201,7 +201,7 @@ tll_foreach(an_integer_list, it) {
 Q: Why do I have to pass **both** the _list_ and the _iterator_ to
    `tll_insert_before()`?
 
-A: If not, either **each** element in the list would have to contain a
+A: If not, **each** element in the list would have to contain a
    pointer to the owning list, which would significantly increase the
    overhead.
 
