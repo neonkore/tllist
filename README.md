@@ -3,6 +3,26 @@
 **tllist** is a *T*yped *L*inked *L*ist C header file only
 library implemented using pre-processor macros.
 
+
+1. [Description](#description)
+1. [Usage](#usage)
+   1. [Declaring a variable](#declaring-a-variable)
+   1. [Adding items - basic](#adding-items-basic)
+   1. [List length](#list-length)
+   1. [Accessing items](#accessing-items)
+   1. [Iterating](#iterating)
+   1. [Removing items - basic](#removing-items-basic)
+   1. [Adding items - advanced](#adding-items-advanced)
+   1. [Removing items - advanced](#removing-items-advanced)
+   1. [Freeing](#freeing)
+1. [Integrating](#integrating)
+   1. [Meson](#meson)
+1. [API](#api)
+   1. [Cheat sheet](#cheat-sheet)
+
+
+## Description
+
 Most C implementations of linked list are untyped. That is, their data
 carriers are typically `void *`. This is error prone since your
 compiler will not be able to help you correct your mistakes (_oh, was
@@ -26,22 +46,6 @@ length lookup constant in time.
 
 Thus, assuming 64-bit pointers (and a 64-bit `size_t` type), the total
 overhead is `3*8 + n*2*8` bytes.
-
-
-1. [Usage](#usage)
-   1. [Declaring a variable](#declaring-a-variable)
-   1. [Adding items - basic](#adding-items-basic)
-   1. [List length](#list-length)
-   1. [Accessing items](#accessing-items)
-   1. [Iterating](#iterating)
-   1. [Removing items - basic](#removing-items-basic)
-   1. [Adding items - advanced](#adding-items-advanced)
-   1. [Removing items - advanced](#removing-items-advanced)
-   1. [Freeing](#freeing)
-1. [Integrating](#integrating)
-   1. [Meson](#meson)
-1. [API](#api)
-   1. [Cheat sheet](#cheat-sheet)
 
 
 ## Usage
