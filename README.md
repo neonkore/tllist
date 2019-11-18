@@ -268,6 +268,6 @@ executable('you-executable', ..., dependencies: [tllist])
 | `tll_insert_before(list, it, item)` | inserts _item_ before _it_.                           | Can only be used inside `tll_(r)foreach()` |
 | `tll_insert_after(list, it, item)`  | inserts _item_ after _it_.                            | Can only be used inside `tll_(r)foreach()` | 
 | `tll_remove(list, it)`              | removes _it_ from the list.                           | Can only be used inside `tll_(r)foreach()` |
-| `tll_remove_and_free(list, it, cb)  | removes _it_ from the list, and calls `cb(it->item)`. | Can only be used inside `tll_(r)foreach()` |
+| `tll_remove_and_free(list, it, cb)` | removes _it_ from the list, and calls `cb(it->item)`. | Can only be used inside `tll_(r)foreach()` |
 | `tll_free(list)`                    | removes **all** items from the list                   |                                            |
 | `tll_free_and_free(list, cb)        | removes **all** items from the list, and calls `cb(it->item)` for each item. |                     |
