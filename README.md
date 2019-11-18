@@ -14,6 +14,8 @@ library implemented using pre-processor macros.
    1. [Adding items - advanced](#adding-items-advanced)
    1. [Removing items - advanced](#removing-items-advanced)
    1. [Freeing](#freeing)
+1. [Integrating](#integrating)
+   1. [Meson](#meson)
 
 
 ## Usage
@@ -226,3 +228,20 @@ tll_foreach(an_integer_list, it) {
 
 Note that there is no need to call `tll_free()` on an empty
 (`tll_length(list) == 0`) list.
+
+
+## Integrating
+
+The easiest way may be to simply copy `tllist.h` into your
+project. But see sections below for other ways.
+
+
+### Meson
+
+You can use tllist as a subproject. In your main project's
+`meson.build`, to something like:
+
+```meson
+tllist = subproject('tllist').get_variable('tllist')
+executable('you-executable', ..., dependencies: [tllist])
+```
