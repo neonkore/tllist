@@ -3,6 +3,30 @@
 **tllist** is a *T*yped *L*inked *L*ist C header file only
 library implemented using pre-processor macros.
 
+Most C implementations of linked list are untyped. That is, their data
+carriers are typically `void *`. This is error prone since your
+compiler will not be able to help you correct your mistakes (_oh, was
+it pointer-to-a-pointer... I though it was just a pointer..._).
+
+**tllist** addresses this by using pre-processor macros to implement
+dynamic types, where the data carrier is typed to whatever you want;
+both **primitive** data types are supported as well as aggregated ones
+such as **structs**, **enums** and **unions**.
+
+Being a double-linked list, most operations are constant in time
+(including pushing and popping both to/from front and back).
+
+The memory overhead is fairly small; each item carries, besides its
+data, a _prev_ and _next_ pointer (i.e. a constant 16 byte overhead
+per item on 64-bit architectures).
+
+The list itself has two _head_ and _tail_ pointers, plus a _length_
+variable (typically 8 bytes on 64-bit architectures) to make list
+length lookup constant in time.
+
+Thus, assuming 64-bit pointers (and a 64-bit `size_t` type), the total
+overhead is `3*8 + n*2*8` bytes.
+
 
 1. [Usage](#usage)
    1. [Declaring a variable](#declaring-a-variable)
