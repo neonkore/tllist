@@ -247,7 +247,7 @@ tll_foreach(int_p_list, it) {
 ### Freeing
 
 To remove **all** items, use `tll_free()`, or
-`tll_free_and_free()`. These are just convenience functions and that
+`tll_free_and_free()`. These are just convenience functions and
 calling these are equivalent to:
 
 ```c
