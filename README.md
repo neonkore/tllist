@@ -1,6 +1,6 @@
 # tllist
 
-**tllist** is a _T_yped _L_inked _L_ist C header file only
+**tllist** is a *T*yped *L*inked *L*ist C header file only
 library implemented using pre-processor macros.
 
 
