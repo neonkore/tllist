@@ -4,9 +4,21 @@
 library implemented using pre-processor macros.
 
 
+1. [Usage](#usage)
+   1. [Declaring a variable](#declaring-a-variable)
+   1. [Adding items - basic](#adding-items-basic)
+   1. [List length](#list-length)
+   1. [Accessing items](#accessing-items)
+   1. [Iterating](#iterating)
+   1. [Removing items - basic](#removing-items-basic)
+   1. [Adding items - advanced](#adding-items-advanced)
+   1. [Removing items - advanced](#removing-items-advanced)
+   1. [Freeing](#freeing)
+
+
 ## Usage
 
-### Declaring a variable, or defining a type:
+### Declaring a variable
 
 1. **Declare a variable**
 
