@@ -132,7 +132,7 @@ Outputs:
 You can iterate the list either forward or backwards, using
 `tll_foreach()` and `tll_rforeach()` respectively.
 
-The `it` variable should be treated as an opaque iterator type, there
+The `it` variable should be treated as an opaque iterator type, where
 `it->item` is the item.
 
 In reality, it is simply a pointer to the linked list entry, and since
