@@ -26,7 +26,7 @@ library implemented using pre-processor macros.
 Most C implementations of linked list are untyped. That is, their data
 carriers are typically `void *`. This is error prone since your
 compiler will not be able to help you correct your mistakes (_oh, was
-it pointer-to-a-pointer... I though it was just a pointer..._).
+it a pointer-to-a-pointer... I thought it was just a pointer..._).
 
 **tllist** addresses this by using pre-processor macros to implement
 dynamic types, where the data carrier is typed to whatever you want;
