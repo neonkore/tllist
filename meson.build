@@ -3,3 +3,7 @@ tllist = declare_dependency(include_directories: '.')
 
 unittest = executable('unittest', 'test.c', dependencies: [tllist])
 test('unittest', unittest)
+
+if not meson.is_subproject()
+  install_headers('tllist.h')
+endif
