@@ -6,4 +6,11 @@ test('unittest', unittest)
 
 if not meson.is_subproject()
   install_headers('tllist.h')
+
+  pkg = import('pkgconfig')
+  pkg.generate(libraries : [],
+               subdirs : ['.'],
+               name : 'tllist',
+               filebase : 'tllist',
+               description : 'A C header file only implementation of a typed linked list')
 endif
