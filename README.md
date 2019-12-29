@@ -266,6 +266,16 @@ The easiest way may be to simply copy `tllist.h` into your
 project. But see sections below for other ways.
 
 
+### Installing
+
+tllist can be installed as a system library. You can then use
+`pkg-config --cflags tllist` to get the compiler flags needed to set
+the include path.
+
+If you are running Arch Linux, there's a bundled [PKGBUILD](PKGBUILD)
+you can use.
+
+
 ### Meson
 
 You can use tllist as a subproject. In your main project's
@@ -274,6 +284,19 @@ You can use tllist as a subproject. In your main project's
 ```meson
 tllist = subproject('tllist').get_variable('tllist')
 executable('you-executable', ..., dependencies: [tllist])
+```
+
+Or, if tllist has been installed as a system library, a regular
+
+```meson
+tllist = dependency('tllist')
+```
+
+will suffice. Optionally, you can combine the two; search for a system
+library first, and fallback to a subproject:
+
+```meson
+tllist = dependency('tllist', version: '>=1.0.0', fallback: ['tllist', 'tllist'])
 ```
 
 
