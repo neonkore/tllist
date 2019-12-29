@@ -16,6 +16,7 @@ library implemented using pre-processor macros.
    1. [Removing items - advanced](#removing-items-advanced)
    1. [Freeing](#freeing)
 1. [Integrating](#integrating)
+   1. [Installing](#installing)
    1. [Meson](#meson)
 1. [API](#api)
    1. [Cheat sheet](#cheat-sheet)
