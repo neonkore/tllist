@@ -1,5 +1,6 @@
-project('tllist', 'c', version: '1.0.0', license: 'MIT', meson_version: '>=0.50.0')
+project('tllist', 'c', version: '1.0.1', license: 'MIT', meson_version: '>=0.54.0')
 tllist = declare_dependency(include_directories: '.')
+meson.override_dependency('tllist', tllist)
 
 unittest = executable('unittest', 'test.c', dependencies: [tllist])
 test('unittest', unittest)
