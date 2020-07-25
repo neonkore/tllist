@@ -14,4 +14,8 @@ if not meson.is_subproject()
                name : 'tllist',
                filebase : 'tllist',
                description : 'A C header file only implementation of a typed linked list')
+
+  install_data(
+    'LICENSE', 'README.md',
+    install_dir: join_paths(get_option('datadir'), 'doc', 'tllist'))
 endif
