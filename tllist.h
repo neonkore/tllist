@@ -25,8 +25,8 @@
  *   tll(int, my_list_type);
  *   struct my_list_type my_list;
  */
-#define tll(TYPE, ...)                                                  \
-    struct __VA_ARGS__ {                                                \
+#define tll(TYPE)                                                       \
+    struct {                                                            \
         TLL_UNIQUE_INNER_STRUCT(TYPE, __COUNTER__)                      \
         size_t length;                                                  \
     }

@@ -71,16 +71,6 @@ overhead is `3*8 + n*2*8` bytes.
    an_integer_list_t an_integer_list = tll_init();
    ```
 
-3. **Named struct**
-
-   ```c
-   /* First declare named struct */
-   tll(int, an_integer_list);
-
-   /* Then declare a variable using that named struct */
-   struct an_integer_list an_integer_list = tll_init();
-   ```
-
 ### Adding items - basic
 
 Use `tll_push_back()` or `tll_push_front()` to add elements to the
