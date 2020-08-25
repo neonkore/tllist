@@ -154,16 +154,18 @@
  * Removes the first element from the list, and returns it (note:
  * returns the *actual* item, not an iterator.
  */
-#define tll_pop_front(list)                                 \
-    ({__typeof__((list).head) it = (list).head;             \
-        __typeof__((list).head->item) __ret = it->item;     \
-        tll_remove((list), it);                             \
-        __ret;                                              \
+#define tll_pop_front(list) __extension__                  \
+    ({                                                     \
+        __typeof__((list).head) it = (list).head;          \
+        __typeof__((list).head->item) __ret = it->item;    \
+        tll_remove((list), it);                            \
+        __ret;                                             \
     })
 
 /* Same as tll_pop_front(), but returns/removes the *last* element */
-#define tll_pop_back(list)                                              \
-    ({__typeof__((list).tail) it = (list).tail;                         \
+#define tll_pop_back(list) __extension__                                \
+    ({                                                                  \
+        __typeof__((list).tail) it = (list).tail;                       \
         __typeof__((list).tail->item) __ret = it->item;                 \
         tll_remove((list), it);                                         \
         __ret;                                                          \
