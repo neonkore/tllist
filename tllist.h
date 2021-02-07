@@ -173,10 +173,20 @@
 
 /* Frees the list. This call is *not* needed if the list is already empty. */
 #define tll_free(list)                          \
-    tll_foreach(list, __it)                     \
-        tll_remove(list, __it)
+    do {                                        \
+        tll_foreach(list, __it)                 \
+            free(__it);                         \
+        (list).length = 0;                      \
+        (list).head = (list).tail = NULL;       \
+    } while (0)
 
 /* Same as tll_free(), but also calls free_callback(item) for every item */
-#define tll_free_and_free(list, free_callback)          \
-    tll_foreach(list, __it)                             \
-        tll_remove_and_free(list, __it, free_callback)
+#define tll_free_and_free(list, free_callback)              \
+    do {                                                    \
+        tll_foreach(list, __it) {                           \
+            free_callback(__it->item);                      \
+            free(__it);                                     \
+        }                                                   \
+        (list).length = 0;                                  \
+        (list).head = (list).tail = NULL;                   \
+    } while (0)
