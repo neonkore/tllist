@@ -3,6 +3,8 @@
 **tllist** is a **T**yped **L**inked **L**ist C header file only
 library implemented using pre-processor macros.
 
+[![CI status](https://ci.codeberg.org/api/badges/<owner>/<repo>/status.svg)[https://ci.codeberg.org/dnkl/tllist]
+
 [![Packaging status](https://repology.org/badge/vertical-allrepos/tllist.svg)](https://repology.org/project/tllist/versions)
 
 1. [Description](#description)
