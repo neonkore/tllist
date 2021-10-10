@@ -1,9 +1,9 @@
+[![CI status](https://ci.codeberg.org/api/badges/dnkl/tllist/status.svg)](https://ci.codeberg.org/dnkl/tllist)
+
 # tllist
 
 **tllist** is a **T**yped **L**inked **L**ist C header file only
 library implemented using pre-processor macros.
-
-[![CI status](https://ci.codeberg.org/api/badges/dnkl/tllist/status.svg)](https://ci.codeberg.org/dnkl/tllist)
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/tllist.svg)](https://repology.org/project/tllist/versions)
 
