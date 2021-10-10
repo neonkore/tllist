@@ -1,6 +1,7 @@
 pipeline:
   build:
     image: alpine:latest
+    when: { branch: master }
     commands:
       - apk update
       - apk add musl-dev meson ninja gcc
