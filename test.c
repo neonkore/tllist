@@ -6,6 +6,18 @@
 
 #include <tllist.h>
 
+static int
+order12(int a, int b)
+{
+	return (b < a);
+}
+
+static int
+order21(int a, int b)
+{
+	return (a < b);
+}
+
 int
 main(int argc, const char *const *argv)
 {
@@ -17,6 +29,14 @@ main(int argc, const char *const *argv)
     tll_push_back(l, 456); assert(tll_length(l) == 2);
     tll_push_back(l, 789); assert(tll_length(l) == 3);
 
+    assert(tll_front(l) == 123);
+    assert(tll_back(l) == 789);
+
+    tll_sort(l, order21);
+    assert(tll_front(l) == 789);
+    assert(tll_back(l) == 123);
+
+    tll_sort(l, order12);
     assert(tll_front(l) == 123);
     assert(tll_back(l) == 789);
 
