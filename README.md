@@ -315,3 +315,4 @@ tllist = dependency('tllist', version: '>=1.0.0', fallback: ['tllist', 'tllist']
 | `tll_remove_and_free(list, it, cb)` | removes _it_ from the list, and calls `cb(it->item)`. | `tll_(r)foreach()` |       O(1) |
 | `tll_free(list)`                    | removes **all** items from the list                   |                    |       O(n) |
 | `tll_free_and_free(list, cb)`       | removes **all** items from the list, and calls `cb(it->item)` for each item. | |   O(n) |
+| `tll_sort(list, cmp)`                | sort the list according to the result of `cmp(item1, item2)` |            | O(n log(n)) |
