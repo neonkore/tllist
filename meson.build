@@ -1,4 +1,8 @@
-project('tllist', 'c', version: '1.0.5', license: 'MIT', meson_version: '>=0.54.0')
+project('tllist',
+        'c',
+        version: '1.1.0',
+        license: 'MIT',
+        meson_version: '>=0.54.0')
 tllist = declare_dependency(include_directories: '.')
 meson.override_dependency('tllist', tllist)
 
